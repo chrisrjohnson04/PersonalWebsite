@@ -39,6 +39,15 @@ const portfolioItems: PortfolioItem[] = [
     description: 'Job application tracking platform',
     technologies: ['Next.js', 'TypeScript', 'TailwindCSS', 'PostgreSQL'],
     details: 'Co-founded job application tracker and assistant. Collaborated with two other developers and maintained for 50+ users.'
+  },
+  {
+    id: 'portfolio-2',
+    type: 'portfolio',
+    title: 'Stock Portfolio Analysis',
+    url: 'github.com/samparkk13/Stock-Portfolio-Analysis',
+    description: 'RAG LLM for Financial Tools',
+    technologies: ['Python', 'OpenAI API', 'LangChain'],
+    details: 'Cornell University capstone project with 2 others.'
   }
 ]
 
