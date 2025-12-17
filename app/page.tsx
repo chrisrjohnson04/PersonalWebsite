@@ -203,7 +203,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-4xl font-bold text-gray-900">welcome!</h2>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  i'm chris, a student at Cornell University studying computer science, graduating in December 2026.
+                  i'm chris, a student at Cornell University studying computer science, graduating in 2026.
                 </p>
                 <p className="text-lg text-gray-500">
                   select a project or research item from the sidebar to learn more about my work.
