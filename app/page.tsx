@@ -45,9 +45,18 @@ const portfolioItems: PortfolioItem[] = [
     type: 'portfolio',
     title: 'Stock Portfolio Analysis',
     url: 'github.com/samparkk13/Stock-Portfolio-Analysis',
-    description: 'RAG LLM for Financial Tools',
+    description: 'LLM for Financial Tools',
     technologies: ['Python', 'OpenAI API', 'LangChain'],
-    details: 'Cornell University capstone project with 2 others.'
+    details: 'Cornell University capstone project with Sam Park and Lucas Guillet. Fine-tuned OpenAI API model to use Python tools that we created for stock portfolio analysis. Built a web app using Flask to interact with the LLM.'
+  },
+  {
+    id: 'portfolio-3',
+    type: 'portfolio',
+    title: 'BeanSearch',
+    url: 'http://4300showcase.infosci.cornell.edu:5244/',
+    description: 'Search engine implementation for INFO 4300',
+    technologies: ['Python', 'Information Retrieval', 'Flask'],
+    details: 'A search engine built for Cornell course INFO 4300 Language and Information. Used cosine similarity and Singular Value Decomposition (SVD) for document similarity. Prepared dataset of coffee beans and attached natural language documents to use for search engine.'
   }
 ]
 
@@ -85,7 +94,7 @@ export default function Home() {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-1">
             chris johnson
           </h1>
-          <p className="text-sm text-gray-500">CS @ Cornell University, Master's Program</p>
+          <p className="text-sm text-gray-500">CS @ Cornell University</p>
         </button>
 
         {/* Resume Button */}
@@ -194,7 +203,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-4xl font-bold text-gray-900">welcome!</h2>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  i'm chris, a Master's Student at Cornell University studying computer science, graduating in December 2026.
+                  i'm chris, a student at Cornell University studying computer science, graduating in December 2026.
                 </p>
                 <p className="text-lg text-gray-500">
                   select a project or research item from the sidebar to learn more about my work.
@@ -217,7 +226,7 @@ export default function Home() {
                 <div className="flex-1">
                   <h1 className="text-4xl font-bold text-gray-900 mb-2">{selectedItem.title}</h1>
                   <a 
-                    href={`https://${selectedItem.url}`}
+                    href={selectedItem.url.startsWith('http') ? selectedItem.url : `https://${selectedItem.url}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-purple-600 hover:text-purple-700 font-medium inline-flex items-center gap-2 group"
@@ -261,7 +270,7 @@ export default function Home() {
                 <h1 className="text-4xl font-bold text-gray-900 mb-3">{selectedItem.title}</h1>
                 <p className="text-xl text-blue-600 font-medium mb-4">{selectedItem.topic}</p>
                 <a 
-                  href={`https://${selectedItem.url}`}
+                  href={selectedItem.url.startsWith('http') ? selectedItem.url : `https://${selectedItem.url}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
